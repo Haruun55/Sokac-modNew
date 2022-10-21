@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="ui.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,200&display=swap" rel="stylesheet">
+        <script src="ui.js"></script>
+    </head>
+    <body>
+        <left>
+            <img src="https://cdn.discordapp.com/attachments/808766696328003664/1031992392334717029/unknown_7_1_3.png">
+            <!--<p id="stock"><b>Goriva u benzinskoj</b>:<BR> 150</p>-->
+            <div class="act">
+                <button id="retirar">Sipanje do kraja</button>
+                <button id="guardar">Sipanje po odredjenoj cjeni</button>
+            </div>
+        </left>
+        <div class="container">
+            <small>Gorivo za</small><br>
+            <span>Vozilo</span>
+            <div class="box">
+                <span id="title">Cjena za platiti</span>
+                <div class="item" style="border: none;">
+                    <button id="minus">-</button>
+                    <input id="amount" type="number" placeholder="$">
+                    <button id="plus" style="right: 5px;">+</button>
+                </div>
+            </div>
+            <div class="box">
+                <span id="title">Nasuto u vozilo:</span>
+                <div class="item">
+                    <div class="litro">
+                        <span><span>$</span> 0.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <span id="title">Cjena po litru</span>
+                <div class="item">
+                    <span id="fuel-price"><span style="font-size: 18px;">$</span> 1.00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal">
+            <button class="accept btninfo">Potvrdi</button>
+            <span>Da li ste sigurni da zelite da potvrdite kupovinu za<br><b>$ 85,00</b></span>
+            <button class="recuse btninfo">Otkazi</button>
+        </div>
+        
+    </body>
+</html>

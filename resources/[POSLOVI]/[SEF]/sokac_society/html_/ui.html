@@ -1,0 +1,165 @@
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+    
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="left_header">
+            <div class ="nav_button" id = "clanovi_Headerbutton">Clanovi</div>
+            <div class ="nav_button" id = "zaposljavanje_Headerbutton">Zaposli</div>
+            <div class ="nav_button" id = "finansije_Headerbutton">Trezor</div>
+            <div class ="nav_button" id = "permisije_Headerbutton">Permisije</div>
+            <div class ="nav_button" id = "plate_Headerbutton">Platne liste</div>
+        </div>
+        <div class="two">
+            <div class = "OrgTitle">Trezor: N/N</div>
+            <div class = "clanovi_div">
+                <div class = "OrgSubTitle">Clanovi</div>
+
+                <section>
+                  <div class="tbl-header">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <thead>
+                        <tr>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Rank</th>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div>
+                  <div class="tbl-content">
+                    <table cellpadding="0" cellspacing="0" border="0" id = "clanovi_tabela">
+                      <tbody>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+
+            </div>
+
+            <div class = "zaposljavanje_div">
+                <div class = "OrgSubTitle">HIRING</div>
+
+                <section>
+                  <div class="tbl-header">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <thead>
+                        <tr>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div>
+                  <div class="tbl-content">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tbody>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+
+            </div>
+
+            <div class = "finansije_div">
+                <div class = "OrgSubTitle">Trezor</div>
+                <div class = "racun_div">
+                    <div class = "OrgSubTitle">Balans</div>
+                    <div class ="ukupnaKolicina">Novac: $<span id = "UkupnoKolicina-Legalno">50000</span><br></div>
+                    <input class = "novacInput" id = "legalno" type="number" placeholder="Enter deposit/withdraw amount">
+                    <div class = "subMenu">
+                        <div class = "submenu_button" id = "legal_podigni">WITHDRAW</div>
+                        <div class = "submenu_button" id = "legal_uplati">DEPOSIT</div>
+                    </div>
+                </div>
+
+                <div class = "racun_div">
+                    <div class = "OrgSubTitle">Prljavi novac</div>
+                    <div class ="ukupnaKolicina">Total illegal money: $<span id = "UkupnoKolicina-Ilegalno">50000</span></div>
+                    <input class = "novacInput" id = "ilegalno" type="number" placeholder="Enter deposit/withdraw amount">
+                    <div class = "subMenu">
+                        <div class = "submenu_button" id = "ilegal_podigni">Povuci</div>
+                        <div class = "submenu_button" id = "ilegal_uplati">Depozit</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class = "permisije_div">
+                <div class = "OrgSubTitle">Rank permisije</div>
+
+                <section>
+                  <div class="tbl-header">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <thead>
+                        <tr>
+                          <th>Rank</th>
+                          <th>Ostavlanje Novca</th>
+                          <th>Podizanje Novca</th>
+                          <th>Zasposli/Odpusti</th>
+                          <th>Pregled clanova</th>
+                          <th>Zapošljavanje</th>
+                          <th>Podesavanje dozvola</th>
+                          <th>Podesavanje platne liste</th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div>
+                  <div class="tbl-content">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tbody>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+
+            </div>
+
+            <div class = "plate_div">
+                <div class = "OrgSubTitle">Platne liste</div>
+
+                <section>
+                  <div class="tbl-header">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <thead>
+                        <tr>
+                          <th>Rank</th>
+                          <th>Placa</th>
+                          <th></th>
+                          <th>Potvrdi</th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div>
+                  <div class="tbl-content">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tbody>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

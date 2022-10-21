@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'Industry';
+  src: url('fonts/Industry-Medium.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Industry';
+  src: url('fonts/Industry-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Industry';
+  font-weight: 300;
+  height: 100vh;
+  width: 100%;
+}
+
+.divider {
+  width: 1px;
+  background-color: rgba(255,255,255,0.1);
+  height: 27px;
+  margin-right: 25px;
+}
+
+.divider2 {
+  width: 1px;
+
+  height: 27px;
+  margin-left: 11px;
+}
+
+#stats {
+  background-color: rgb(36, 36, 36);
+  border: solid 2px #f30000;
+  background-size: cover;
+  height: 500px;
+  width: 200px;
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 45px;
+  border-radius: 10px;
+  display: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-left: -10%;
+}
+
+.logo img {
+  height: 70px;
+  width: 65px;
+  margin-right: 10px;
+}
+
+.logo p {
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.service {
+  margin-bottom: 29px;
+}
+.last-child {
+  margin-bottom: 0px !important;
+}
+.server-stats {
+  display: flex;
+  align-items: center;
+}
+
+.server-stats .player-id {
+  color: white;
+  font-size: 18px;
+  margin-right: 25px;
+}
+
+.server-stats .player-id .id {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+
+.server-stats .players-number {
+  color: white;
+  font-size: 14px;
+  margin-left: 0px;
+}
+
+.server-stats .players-number .num-players {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+
+.service {
+  display: flex;
+  align-content: center;
+}
+
+.service-img {
+  margin-right: 20px;
+}
+
+.service img {
+max-width: 55px;
+max-height: 55px;
+-webkit-filter: invert(100%);
+filter: invert(100%);
+}
+
+.service .service-stats {
+  margin: auto 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.service .service-stats p {
+  color: white;
+  font-size: 15px;
+  margin-bottom: 7px;
+}
+
+.service .service-stats .circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+}
+
+.green {
+  background-color: #ffffff;
+}
+.yellow {
+  background-color: #ffffff;
+}
+.red {
+  background-color: #ffffff;
+}
+
+hr.hrstd {
+  border-top: 1px solid rgba(255, 255, 255, 0.521);
+  margin: 40px 0px;
+  border-bottom: 0px;
+  border-right: 0px;
+  border-left: 0px;
+}

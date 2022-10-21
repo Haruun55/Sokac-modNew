@@ -1,0 +1,623 @@
+<html>
+
+<head>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="closemenu" class="modal">
+            <div class="modal-content">
+                <h5>Butik</h5>
+                <p>Zatvoriti zaslon trgovine?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" id="save" class="modal-close waves-effect waves-light btn green">Potvrdi</a>
+                <a href="#!" id="cancel" class="modal-close waves-effect waves-light btn grey">Otkazi</a>
+            </div>
+        </div>
+        <div id="savemenu" style="height: auto" class="modal">
+            <div style="height: 100px" class="modal-content">
+                <h4>POTVRDA</h4>
+                <p>Nakon što unesete naziv za svoju odjeću, pritisnite ENTER</p>
+            </div>
+            <div class="modal-footer">
+                <!-- <input id="savename" class="input-number col s4" type="text" /> -->
+                <input style="width: 920px; height: 36px; background-color: rgb(134, 255, 130)" class="black-text text-lighten-3 panel-label" placeholder="  Kıyafetinizin İsmi" type="text"/>
+                <!-- <a href="#!" id="savesave" class="modal-close waves-effect waves-light btn green">Ekle</a> -->
+                <a href="#!" id="cancelsave" style="bottom: 4px" class="modal-close waves-effect waves-light btn grey">Otkazi</a>
+            </div>
+        </div>
+        <div id="clothesmenu" style="display: none" class="row">
+            <div id="clothes-container" class="col s5">
+                <div id="button_menu" class="row">
+                    <button id="button-clothes" data-target="clothes"
+                        class="button-menu waves-effect waves-light btn-large active">Odjeća</button>
+                    <button id="button-access" data-target="access"
+                        class="button-menu waves-effect waves-light btn-large">Pribor</button>
+                    <button id="button-ped" data-target="ped"
+                        class="button-menu waves-effect waves-light btn-large">Ormar</button>
+                </div>
+                <div id="camera_menu" class="row">
+                    <div class="col s12">
+                        <button class="tog_hat col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fab fa-redhat"></i>
+                        </button>
+                        <button class="tog_glasses col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fas fa-glasses"></i>
+                        </button>
+                        <button class="tog_tops col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fas fa-tshirt"></i>
+                        </button>
+                        <button class="tog_head col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fas fa-meh"></i>
+                        </button>
+                        <button class="tog_torso col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fas fa-user-tie"></i>
+                        </button>
+                        <button class="tog_leg col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fas fa-socks"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="clothes" class="row">
+                    <div class="scroll-container">
+                        <div id="hats" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">Kapa/Sesir</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Kosa: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Koža: <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="hair" class="hair col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">Dlaka</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Kosa: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Koža: <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s12">
+                                    <ul class="collapsible">
+                                        <li>
+                                            <div class="collapsible-header">Paleta boja</div>
+                                            <div class="collapsible-body color_palette_container haircol"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col s12">
+                                    <ul class="collapsible">
+                                        <li>
+                                            <div class="collapsible-header">2. Paleta boja</div>
+                                            <div class="collapsible-body color_palette_container haircol"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="jackets" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">Jakna</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Dodatak: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Boja: <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="undershirts" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">Potkošulje</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Dodatak: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Koza: <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="torsos" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">Rukavi/rukavice</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Eşya: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Boja: <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="legs" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">Pantalone</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Dodatak: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Koza: <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="shoes" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">Cipele</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Dodatak: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Boja: <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="decals" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">Stikeri</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Dodatak: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Dizajn: <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="access" class="row" style="display: none;">
+                    <div class="scroll-container">
+                        <div id="masks" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">Maske</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Dodatak: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Dizajn: <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="glasses" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">Naočale</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Dodatak: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Dizajn: <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="earrings" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">Uho</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Dodatak: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Model: <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="neck" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">Šal i ogrlica</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Dodatak: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Dizajn: <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="watches" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">Satovi</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Eşya: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Cilt: <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="braclets" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">
+                                    Ručni zglob</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Eşya: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Cilt: <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="vest" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">Oklop</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Eşya: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Renk: <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="bags" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">Torba</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Eşya: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Cilt: <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="ped" class="row" style="display: none;">
+                    <div class="scroll-container">
+                        <div id="warning_skins" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">Važne informacije</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s12 panel-col">
+                                    <p>
+                                        Vraća vaš lik na ono kakav je bio prije nego što ste ušli u trgovinu.</p>
+                                    <button id="reset" class="waves-effect waves-light btn">RESET</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="savedclothes" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">
+                                    Sačuvajte svoju odjeću u svom ormaru</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s12 panel-col">
+                                    <p>Sprema vašu odjeću.</p>
+                                    <button id="savecurrent" class="waves-effect waves-light btn">SPREMI</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="savedclothes" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">Registrirana odjeća</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <button id="savedleft" class="button-left2 col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input id="savedinput" class="input-number col s4" type="number" value="0" />
+                                    <button id="savedright" class="button-right2 col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>

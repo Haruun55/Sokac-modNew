@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StateV- Loadingscreen</title>
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: Web 1920 – 4;
+		--web-view-id: Web_1920__4;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Web_1920__4;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#Web_1920__4 {
+		position: absolute;
+		width: 1920px;
+		height: 1080px;
+		background: rgb(94, 21, 21);
+		overflow: hidden;
+		--web-view-name: Web 1920 – 4;
+		--web-view-id: Web_1920__4;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	#red-smoke-31 {
+		filter: blur(27px);
+		position: absolute;
+		width: 2186px;
+		height: 1230px;
+		left: -112px;
+		top: -80px;
+		overflow: visible;
+	}
+	#Rechteck_31 {
+		opacity: 0;
+		fill: rgba(0,0,0,1);
+	}
+	.Rechteck_31 {
+		position: absolute;
+		overflow: visible;
+		width: 2043px;
+		height: 293px;
+		left: -61px;
+		top: 670px;
+	}
+	#statev_logo_transparent {
+		opacity: 0.74;
+		filter: blur(1px);
+		position: absolute;
+		width: 425px;
+		height: 470px;
+		left: 730px;
+		top: 150px;
+		overflow: visible;
+	}
+	#Rechteck_34 {
+		fill: transparent;
+		stroke: rgb(255, 2, 2);
+		stroke-width: 3px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rechteck_34 {
+		position: absolute;
+		overflow: visible;
+		width: 194px;
+		height: 57px;
+		left: 385px;
+		top: 759px;
+	}
+	#Rechteck_35 {
+		fill: transparent;
+		stroke: rgb(255, 2, 2);;
+		stroke-width: 3px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rechteck_35 {
+		position: absolute;
+		overflow: visible;
+		width: 194px;
+		height: 57px;
+		left: 1343px;
+		top: 757px;
+	}
+	#statev_logo_transparent_p {
+		position: absolute;
+		width: 420px;
+		height: 295px;
+		left: 750px;
+		top: 296px;
+		overflow: visible;
+	}
+	#DISCORD {
+		left: 433px;
+		top: 828px;
+		position: absolute;
+		overflow: visible;
+		width: 97px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 22px;
+		color: rgba(245,245,245,1);
+	}
+	#DISCORDGGSTATEV {
+		left: 410px;
+		top: 889px;
+		position: absolute;
+		overflow: visible;
+		width: 150px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 15px;
+		color: rgba(245,245,245,1);
+	}
+	#Linie_1 {
+		fill: transparent;
+		stroke: rgb(255, 2, 2);;
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Linie_1 {
+		overflow: visible;
+		position: absolute;
+		width: 99px;
+		height: 1px;
+		left: 432px;
+		top: 870.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#UCP {
+		left: 939px;
+		top: 828px;
+		position: absolute;
+		overflow: visible;
+		width: 44px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 22px;
+		color: rgba(245,245,245,1);
+	}
+	#UCPSTATEVCC {
+		left: 890px;
+		top: 890px;
+		position: absolute;
+		overflow: visible;
+		width: 106px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 15px;
+		color: rgba(245,245,245,1);
+	}
+	#Linie_2 {
+		fill: transparent;
+		stroke: rgb(255, 2, 2);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Linie_2 {
+		overflow: visible;
+		position: absolute;
+		width: 99px;
+		height: 1px;
+		left: 910.5px;
+		top: 870.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#TEAMSPEAK {
+		left: 1376px;
+		top: 828px;
+		position: absolute;
+		overflow: visible;
+		width: 130px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 22px;
+		color: rgba(245,245,245,1);
+	}
+	#TSSTATEVCC {
+		left: 1378px;
+		top: 890px;
+		position: absolute;
+		overflow: visible;
+		width: 96px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 15px;
+		color: rgba(245,245,245,1);
+	}
+	#Linie_3 {
+		fill: transparent;
+		stroke: rgb(255, 2, 2);;
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Linie_3 {
+		overflow: visible;
+		position: absolute;
+		width: 99px;
+		height: 1px;
+		left: 1390px;
+		top: 870.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#LEERTASTE__MUTE {
+		left: 882px;
+		top: 1028px;
+		position: absolute;
+		overflow: visible;
+		width: 157px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		text-align: center;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		color: rgba(245,245,245,1);
+	}
+	#sSI04SV {
+		position: absolute;
+		width: 44px;
+		height: 44px;
+		left: 459px;
+		top: 766px;
+		overflow: visible;
+	}
+	#TeamSpeak_logo_renodddvado {
+		position: absolute;
+		width: 39px;
+		height: 39px;
+		left: 1420px;
+		top: 766px;
+		overflow: visible;
+	}
+	#ID005071cbf1fdd17673607ecd7b7e {
+		position: absolute;
+		width: 43px;
+		height: 43px;
+		left: 939px;
+		top: 766px;
+		overflow: visible;
+	}
+	#Rechteck_37 {
+		fill: transparent;
+		stroke: rgb(255, 2, 2);
+		stroke-width: 3px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rechteck_37 {
+		position: absolute;
+		overflow: visible;
+		width: 194px;
+		height: 57px;
+		left: 863px;
+		top: 759px;
+	}
+	#Rechteck_38 {
+		fill: transparent;
+		stroke: rgb(255, 2, 2);;
+		stroke-width: 3px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rechteck_38 {
+		position: absolute;
+		overflow: visible;
+		width: 194px;
+		height: 47px;
+		left: 863px;
+		top: 1017px;
+	}
+	.animation-area {
+		width: 100%;
+		height: 100vh;
+	}
+	.box-area {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	.box-area li {
+		position: absolute;
+		display: block;
+		list-style: none;
+		width: 25px;
+		height: 25px;
+		background: rgba(0, 0, 0, 0.137);
+		animation: animate 20s linear infinite;
+		bottom: -150px;
+	}
+	.box-area li:nth-child(1) {
+		left: 86%;
+		width: 80px;
+		height: 80px;
+		animation-delay: 0s;
+	}
+	.box-area li:nth-child(2) {
+		left: 12%;
+		width: 30px;
+		height: 30px;
+		animation-delay: 1.5s;
+		animation-duration: 10s;
+	}
+	.box-area li:nth-child(3) {
+		left: 70%;
+		width: 100px;
+		height: 100px;
+		animation-delay: 5.5s;
+	}
+	.box-area li:nth-child(4) {
+		left: 42%;
+		width: 150px;
+		height: 150px;
+		animation-delay: 0s;
+		animation-duration: 15s;
+	}
+	.box-area li:nth-child(5) {
+		left: 65%;
+		width: 40px;
+		height: 40px;
+		animation-delay: 0s;
+	}
+	.box-area li:nth-child(6) {
+		left: 15%;
+		width: 110px;
+		height: 110px;
+		animation-delay: 3.5s;
+	}
+	@keyframes animate {
+		0% {
+			transform: translateY(0) rotate(0deg);
+			opacity: 1;
+		}
+		100% {
+			transform: translateY(-800px) rotate(360deg);
+			opacity: 0;
+		}
+}
+</style>
+</head>
+<body>
+<div id="Web_1920__4">
+	<img id="red-smoke-31" src="red-smoke-31.png" srcset="red-smoke-31.png 1x, red-smoke-31@2x.png 2x">
+		
+	<svg class="Rechteck_31">
+		<rect id="Rechteck_31" rx="0" ry="0" x="0" y="0" width="2043" height="293">
+		</rect>
+	</svg>
+	<img id="statev_logo_transparent" src="statev_logo_transparent.png" srcset="statev_logo_transparent.png 1x, statev_logo_transparent@2x.png 2x">
+		
+	<svg class="Rechteck_34">
+		<rect id="Rechteck_34" rx="12" ry="12" x="0" y="0" width="194" height="57">
+		</rect>
+	</svg>
+	<svg class="Rechteck_35">
+		<rect id="Rechteck_35" rx="9" ry="9" x="0" y="0" width="194" height="57">
+		</rect>
+	</svg>
+		
+	<div id="DISCORD">
+		<span>DISCORD</span>
+	</div>
+	<div id="DISCORDGGSTATEV">
+		<span>DISCORD.GG/SOKAC</span>
+	</div>
+	<svg class="Linie_1" viewBox="0 0 99 1">
+		<path id="Linie_1" d="M 0 0 L 99 0">
+		</path>
+	</svg>
+	<div id="UCP">
+		<span>SITE</span>
+	</div>
+	<div id="UCPSTATEVCC">
+		<span>WWW.SOKAC.COM</span>
+	</div>
+	<svg class="Linie_2" viewBox="0 0 99 1">
+		<path id="Linie_2" d="M 0 0 L 99 0">
+		</path>
+	</svg>
+	<div id="TEAMSPEAK">
+		<span>DEVELOPERI</span>
+	</div>
+	<div id="TSSTATEVCC">
+		<span>HARUN // ANDZI</span>
+	</div>
+	<div class="animation-area">
+		<ul class="box-area">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<svg class="Linie_3" viewBox="0 0 99 1">
+		<path id="Linie_3" d="M 0 0 L 99 0">
+		</path>
+	</svg>
+	<div id="LEERTASTE__MUTE">
+		<span>MUTE</span>
+	</div>
+	<img id="sSI04SV" src="sSI04SV.png" srcset="sSI04SV.png 1x, sSI04SV@2x.png 2x">
+		
+	<img id="TeamSpeak_logo_renodddvado" src="TeamSpeak_logo_renodddvado.png" srcset="TeamSpeak_logo_renodddvado.png 1x, TeamSpeak_logo_renodddvado@2x.png 2x">
+		
+	<img id="ID005071cbf1fdd17673607ecd7b7e" src="ID005071cbf1fdd17673607ecd7b7e.png" srcset="ID005071cbf1fdd17673607ecd7b7e.png 1x, ID005071cbf1fdd17673607ecd7b7e@2x.png 2x">
+		
+	<svg class="Rechteck_37">
+		<rect id="Rechteck_37" rx="14" ry="14" x="0" y="0" width="194" height="57">
+		</rect>
+	</svg>
+	<svg class="Rechteck_38">
+		<rect id="Rechteck_38" rx="14" ry="14" x="0" y="0" width="194" height="47">
+		</rect>
+	</svg>
+	</div>
+	<audio id="lesson" src="sound.mp3" autoplay="false" hidden="true" loop="true"/>
+	<script>
+
+	var play = true;
+	var myAudio = document.getElementById("lesson");
+
+	myAudio.volume = 0.1;
+
+
+	function onKeyDown(event) {
+			switch (event.keyCode) {
+				case 32:            
+					if (play) {
+						myAudio.pause();
+						play = false;
+					} else {
+						myAudio.play();
+						play = true;
+					}
+					break;
+			}
+ 	 return false;
+	}
+
+	window.addEventListener("keydown", onKeyDown, false);
+	</script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+currentIndex = 0
+datica = null
+vozilaData = null
+const resourceName = 'a-autosalon'
+
+
+window.addEventListener('message', function(event) {
+  let data = event.data
+  datica = data
+
+  if (data.action == "open") {
+    $("#welcome-container").html('')
+    $("#lista-container").html('')
+    setupMainPage()
+
+  } else if (data.action == "close") {
+    $("#container").slideDown("slow")
+    $.post(`https://${GetParentResourceName()}/close`, JSON.stringify({}));
+  }
+});
+
+document.onkeyup = function (data) {
+  if (data.which == 27) {
+    $("#container").slideUp("slow")
+    $("#welcome-container").slideUp('slow')
+    $.post(`https://${GetParentResourceName()}/close`, JSON.stringify({}));
+  }
+
+  if (data.which == 39) {
+    $("#auto-container").html('')
+    $("#specifikacije-container").html('')
+    currentIndex = currentIndex + 1
+    setupPage(currentIndex, vozilaData)
+
+  }
+
+  if (data.which == 37) {
+    $("#auto-container").html('')
+    $("#specifikacije-container").html('')
+    currentIndex = currentIndex - 1
+    setupPage(currentIndex, vozilaData)
+
+  }
+
+  if (data.which == 13) {
+    buyVozilo()
+  }
+};
+
+
+function setupMainPage() {
+  $("#welcome-container").slideDown("slow")
+
+  $("#welcome-container").append(`
+  
+  <img src="https://i.imgur.com/WGLKX5H.png" id="logo">
+  <div id="moneystatus"> <i class="fas fa-wallet" id="mstatus-icon"></i> Stanje: $512,000 </div> 
+  <div id="vidiostalo" onclick="otvoriGlavno()"> <i class="fas fa-angle-right fa-2x" style="color: white; padding-top: 9px; padding-left: 17px;"></i> </div>
+  <div id="welcomeauto"> Nissan <br> Fairlady <br> Z423 </div>
+  <div id="limitededition"> LIMITED EDITION </div>
+
+  <hr style="height:2px; width:95%; border-width:0; color:rgb(255, 255, 255); background-color:rgb(255, 255, 255); margin-top: 1%;margin-left: 2%;">
+  <hr style="height:2px; width:20%; border-width:0; color:rgb(255, 255, 255); background-color:rgb(255, 255, 255); margin-top: 23%;margin-left: 4.3%;">
+  <div id="welcometext"> Kupite novo limited edition vozilo <br> po odlicnoj cijeni od: </div>
+  <div id="welcomecijena"> $40,000 </div>
+  <div id="welcomebuy"> <i class="fas fa-shopping-cart"></i> </div> 
+  <img id="splash" src="`+ 'https://freepikpsd.com/file/2020/01/Splash-PNG-Image.png' +`" class="">
+  <img id="autoslikica" src="`+ 'https://i.imgur.com/9Z6aadQ.png' +`" class="">
+  `)
+}
+
+function otvoriGlavno(){
+  $("#welcome-container").hide("slow")
+  $("#container").slideDown("slow")
+  kreirajListu(datica.vozila)
+  setupPage()
+}
+
+function setupPage(index, vozila) {
+  $("#auto-container").append(`
+  <div id="autosalon">` + 'NUEVA AUTOSALON' + `</div>
+  <div class="vl"></div>
+  <div id="balans"> BALANS </div>
+  <div id="balanstekst">` + '500,000$' + `</div>
+
+  <div id="imeauta">` + vozila[index].name + `</div>
+  <div class="col-12 pic-container">
+  <img id="center" src="`+ vozila[index].imgsrc +`" class="mx-auto">
+
+  <div id="cijenabox"> <div id="cijenamini">CIJENA </div> <div id="cijenatxt">` + vozila[index].price + `$</div> </div> 
+  <div id="maxbrzheader">` + 'MAKSIMALNA BRZINA' + `</div>
+  <div id="maxbrz">` + vozila[index].maxbrzina + ' km / h' + `</div>
+
+  <div id="gepekh">` + 'KAPACITET PRTLJAZNIKA' + `</div>
+  <div id="gepek">` +  vozila[index].prtljaznik + 'L' + `</div>
+
+  <div id="ubrzanjeh">` + 'UBRZANJE OD 0 DO 100 KM / H' + `</div>
+  <div id="ubrzanje">` + vozila[index].ubrzanje + ' sek' + `</div>
+
+  <div id="rezervarh">` + 'KAPACITET REZERVOARA ZA GORIVO' + `</div>
+  <div id="rezervar">` +  vozila[index].rezervar + 'L' + `</div>
+
+  <div id="osiguranjah">` + 'OSIGURANJE' + `</div>
+  <div id="osiguranja">` + vozila[index].osiguranje + `</div>
+
+  <div id="tuningh">` + 'PODESAVANJA' + `</div>
+  <div id="tuning">` + vozila[index].podesavanje + `</div>
+
+  <div id='kupiauto' onclick="buyVozilo()"> <i class="fas fa-wallet"></i> KUPI </div>
+  <div id='testvoznja' onclick=""> <i class="fas fa-car"></i> TESTNA VOZNJA </div>
+
+  </div>`);
+
+  $("#final-container").append(`
+  <div id="kupiauto" onclick="buyVozilo()"> <i class="fas fa-money-check"></i> KUPI AUTO </div> 
+  <div id="testvoznja" onclick="testVozilo()"> <i class="fas fa-key"></i> PROBNA V. </div> 
+  </div>`);
+}
+
+//  ============= FUNKCIJE ZA BUTTONE =============
+function testVozilo() {
+  $.post('https://' + resourceName + '/testirajvozilo', JSON.stringify({
+      model : vozilaData[currentIndex].model
+  }))
+  zatvori()
+}
+
+function buyVozilo() {
+  $.post('https://' + resourceName + '/kupiVozilo', JSON.stringify({
+      model : vozilaData[currentIndex].model, price : vozilaData[currentIndex].price, name : vozilaData[currentIndex].name, slika : vozilaData[currentIndex].imgsrc
+  }))
+  zatvori()
+}
+
+function promjeniBoju(r,g,b) {
+  console.log(r,g,b)
+  $.post('https://' + resourceName + '/cejndzKolorNajjace', JSON.stringify({
+    r : r, g : g, b : b
+  }))
+}
+
+function kreirajListu(vehicleList) {
+  $.each(vehicleList, function(k,v) {
+    if (typeof v.imgsrc !== 'undefined') {
+        $("#lista-container").append(`
+          <div class="row"">
+                <div class="col-12 lista-karta my-2"<i id="btn-`+ k +`"></i>
+                <div class="col-2 pic-slot d-flex align-items-center"><img class="mx-2" src="`+ v.imgsrc +`" style="width: 100%;"></div>
+                    <div class="col-2 d-flex align-items-center"><span class="">` + v.name +`</span></div>
+                    </div>
+                    
+                </div>
+            </div>
+        `);
+        $("#btn-" + k).click(function() {
+          $("#auto-container").html('')
+          $("#specifikacije-container").html('')
+      
+          currentIndex = k
+          vozilaData = vehicleList
+          setupPage(currentIndex, vehicleList)
+      });
+    }
+});
+}
+
+function zatvori() {
+  $("#welcome-container").hide("slow")
+  $("#container").hide("slow")
+
+
+}

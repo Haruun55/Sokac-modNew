@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:300');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.vrijeme {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  bottom: 10%;
+  font-size: 30px;
+  font-family: Exo;
+  color: rgb(255, 255, 255);
+}
+
+#glavno {
+  display: none;
+}
+
+#info {
+  width: 40%;
+  height: 60%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:rgb(36, 36, 36);
+  display: none;
+  border: solid 2px #f30000;
+}
+
+#NotifList {
+  padding-left: 20px;
+  position: fixed;
+  left: 0;
+  top: 30%;
+}
+
+
+.TestInner {
+  display: none;
+  padding: 10px;
+  margin-left: 10px;
+  background-color:rgb(36, 36, 36);
+  border: solid 2px #f30000;
+  width: 450px;
+  height: 100px;
+  text-align: center;
+  -webkit-box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.75);
+  margin-bottom: 10px;
+}
+
+.titleZatvor {
+  font-family: Exo;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+
+.textZatvor {
+  color: rgb(255, 255, 255);
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: Exo;
+}
+
+.textImage {
+  width: 15%;
+  height: 30%;
+}
+
+.doubleZatvor {
+  display: flex;
+}

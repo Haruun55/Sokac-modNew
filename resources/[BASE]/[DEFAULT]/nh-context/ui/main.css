@@ -1,0 +1,145 @@
+
+
+@font-face {
+    font-family: 'Industry';
+    src: url('Industry-Medium.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('Industry-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.5;
+    animation-name: animatetop;
+    animation-duration: 0.5s;
+
+}
+
+
+
+#container {
+    position: absolute;
+    height: auto;
+    top: 20%;
+    right: 10%;
+    background: transparent !important;
+
+}
+
+
+#buttons {
+    max-height: 75vh;
+    width: 35vw;
+    overflow-x: none;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+html,body {
+    background: transparent !important;
+
+}
+
+#buttons::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-left: 45%;
+}
+
+.logo2 {
+    display: none;
+
+}
+
+.logo img {
+    height: 65px;
+    width: auto;
+    margin-right: 100%;
+}
+
+.logo p {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.button {
+    width: auto;
+    max-width: 45%;
+    height: 10%;
+    border: solid 1px red;
+    background: rgb(36, 36, 36);
+    margin: auto;
+    position: relative;
+    top: 10%;
+    margin-top: 0.5rem;
+    overflow: hidden;
+    padding: 0.45rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+}
+
+.button:hover{
+    background-color: #f30000;
+    color: aliceblue;
+    transform: scale(1.10);
+    transition: transform .5s; /* Animation */
+
+}
+
+.button > .txt {
+    color: rgb(232, 229, 229);
+    flex-direction: column;
+    font-family: 'Industry';
+    font-size: 0.8rem;
+    overflow: hidden;
+    font-weight: 300;
+
+}
+
+.button > .header {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: left;
+    overflow: wrap;
+    color:  rgb(232, 229, 229);
+    font-family: 'Industry';
+    font-size: 0.9rem;
+    overflow: hidden;
+    font-weight: 500;
+
+    
+}
+
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:100; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:100; opacity:1}
+  }

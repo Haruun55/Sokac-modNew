@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-Medium.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+* {
+
+    font-family: 'Industry';
+    font-weight: 300;
+    font-size         :       1.1vh;
+
+    vertical-align  :       middle;
+
+}
+
+.outline {
+    position: fixed;
+    bottom: 8vh;
+    left: 5.8vh;
+    overflow: hidden;
+    width: 29.629vh;
+    text-align: center;
+  }
+  
+  .mapborder {
+    width: 27vh;
+    height: 27vh;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 47px;
+    display: inline-block;
+  }
+
+#StatusHud {
+
+    position     :       absolute;
+
+    bottom       :       5%;
+
+    border-left: 3.5px solid #f30000;
+    border-right: 3.5px solid #ff0000;
+
+
+    left         :       1%;
+
+}
+
+#InformacijeHud {
+
+    position     :       absolute;
+
+    bottom       :       1%;
+
+    border-left: 3.5px solid #000000;
+    border-right: 3.5px solid #000000;
+    background-color: rgba(12, 15, 29, 0.295);
+
+    right         :       0.5%;
+
+}
+
+#naslovKontrole {
+    position     :       absolute;
+    font-size: 500px;
+    text-align: center;
+    font-weight: bolda;
+    bottom       :       5%;
+    color: white;
+    left         :       1%;
+
+}
+
+#kontrole {
+    width: 8%;
+    height: 13%;
+    position: absolute;
+    font-size: 50px;
+    text-align: left;
+    bottom: 5%;
+    border-left: 2px solid #0077ff;
+    border-right: 2px solid rgb(0, 119, 255);
+    background-color       :       rgba(40, 40, 40, 0.329);
+    padding-left: 0.5%;
+    color: white;
+    left: 1%;
+}
+
+
+
+
+
+#tekst {
+    width: 13.6%;
+    height: 2.75%;
+    position     :       absolute;
+    font-size: 100px;
+    text-align: center;
+    bottom       :       5%;
+    border-left: 3.5px solid #ffa600;
+    border-right: 3.5px solid #ffa600;
+    background-color: #ffa6005b;
+
+    color: white;
+    left         :       1%;
+
+}
+
+
+.textpercent {
+
+    width            :       2vh;
+
+    float            :       right;
+
+    padding-left     :       0.5vh;
+
+    text-align       :       center;
+
+}
+
+body {
+
+    width     :       100%;
+
+    overflow  :       hidden;
+
+}
+
+
+.cmx-hud-box {
+
+    display                :        inline-block;
+
+    background-color       :       rgb(36, 36, 36);
+
+    color                  :       white;
+
+    padding                :        4.5px 6px;
+
+    width                  :        fit-content;
+
+    text-align             :       center;
+
+    margin-top             :       0.2vh;
+
+    border-radius          :       0.0vh;
+
+    color                  :     white;
+
+}
+
+.infobox {
+
+    display                :        inline-block;
+
+    background-color       :       rgba(197, 38, 38, 0.329);
+
+
+    padding                :        4.5px 6px;
+
+    width                  :        fit-content;
+
+    text-align             :       center;
+
+    margin-top             :       0.2vh;
+
+    border-radius          :       0.4vh;
+
+    color                  :     white;
+    
+
+}

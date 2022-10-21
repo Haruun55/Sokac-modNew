@@ -1,0 +1,261 @@
+/** General Selectors*/
+
+@font-face {
+    font-family: 'Industry';
+    src: url('fonts/Industry-Medium.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('fonts/Industry-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+
+body {
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Industry';
+    background-size: cover;
+}
+/** General Selectors*/
+.wrapper {
+    color: white;
+    position: fixed;
+    border: 2px solid red;
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 80%;
+    border-radius: 2px;
+    background-color: rgb(36, 36, 36);
+    display: none;
+}
+
+.left_header, .two {
+   min-height: 200px;
+   padding: 10px;
+}
+
+.left_header {
+  background-color: none;
+  float:left;
+  margin-right:10px;
+  width:10%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+.two {
+    padding: 25px;
+    background-color: none;
+    overflow: hidden;
+    min-height: 550px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav_button {
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    background-color: #9b1919;
+    border-radius: 5px;
+    transition: 0.2s all;
+}
+
+.nav_button:hover {
+    background-color: #a06969;
+    transition: 0.2s all;
+    cursor: pointer;
+}
+
+.nav_button.disabledButt {
+     filter: blur(0.8px);
+}
+
+.nav_button.disabledButt:hover {
+    cursor: not-allowed;
+    transform: scale(1.0);
+}
+
+@media screen and (max-width: 400px) {
+   .left_header {
+    float: none;
+    margin-right:0;
+    width:auto;
+    border:0;
+    border-bottom:2px solid rgba(255, 255, 255, 0.5);
+  }
+}
+
+
+/* TABLE */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(250, 255, 255,0.3);
+}
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(250, 255, 255,0.3);
+}
+
+.clanovi_div, .zaposljavanje_div, .finansije_div, .permisije_div, .plate_div {
+    display: none;
+}
+
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: #9599A3;
+  border-radius: 5px 5px 0px 0px;
+ }
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: white;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: white;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+.in_tableButton {
+    border: 1px solid white;
+    padding: 5px;
+    text-align: center;
+    width: 70%;
+    z-index: 999;
+}
+
+.in_tableButton:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.activeContainer {
+    display: block;
+}
+
+.OrgTitle {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 20px;
+    text-align: center;
+    background-color: #e53838;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.OrgSubTitle {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin: 0px 0px 50px 0px;
+    background-color: #e53838;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.subMenu {
+    width: 100%;
+    text-align: center;
+}
+
+.submenu_button {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 7px;
+    min-width: 150px;
+    width: 150px;
+    height: 25px;
+    background-color: #f41c1c;
+    border-radius: 5px;
+    transition: 0.2s all;
+}
+
+.submenu_button:hover {
+    color: #f41c1c;
+    background-color: rgba(255, 255, 255, 0.233);
+    transition: 0.2s all;
+    cursor: pointer;
+}
+
+.submenu_button.disabledButt {
+     filter: blur(0.8px);
+}
+
+.submenu_button.disabledButt:hover {
+    cursor: not-allowed;
+    transform: scale(1.0);
+}
+
+.disabledButt {
+     filter: blur(0.8px);
+}
+.disabledButt:hover {
+    cursor: not-allowed;
+    transform: scale(1.0);
+}
+
+.finansije_div {
+    white-space: nowrap;
+}
+
+.racun_div {
+    position: relative;
+    display: inline-block;
+    width: 49.5%;
+    white-space: normal;
+    min-height: 350px;
+    text-align: center;
+    background-color: #270e0e;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.ukupnaKolicina {
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.novacInput {
+    width: 332px;
+    padding: 5px 15px;
+    color: white;
+    height: 50;
+    background-color: #462a2a;
+    border: none;
+    border-radius: 5px;
+}

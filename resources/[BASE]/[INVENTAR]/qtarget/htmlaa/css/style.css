@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+
+.target-wrapper {
+	display: none;
+}
+
+.target-eye {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	font-size: 3vh;
+}
+
+.target-label-wrapper {
+	position: absolute;
+	top: 56%;
+	left: 42.5%;
+	margin-left: 2vh;
+	margin-top: -1.5vh;
+}
+
+.target-label {
+	list-style: none;
+	font-size: 1.3vh;
+	font-weight: bold;
+	font-family: 'Oxygen';
+	color: white;
+	text-transform: uppercase;
+	user-select: none;
+	white-space: nowrap;
+	vertical-align: middle;
+	padding-left: 4px
+}
+
+.target-icon {
+	color: #ffa600;
+	margin-top: 2px;
+}
+
+.target-item {
+    background:#0e152783;
+	margin-bottom: 6px;
+    transition: 0.2s transform ease-in-out;
+	width: 280px;
+	padding: 6px;
+	height: 19px;
+}

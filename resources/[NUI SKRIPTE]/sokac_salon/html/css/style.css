@@ -1,0 +1,912 @@
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-Medium.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Industry';
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ffffff; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #921e1a; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0); 
+  }
+
+#eskejp{
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    color: rgba(255,255,255,0.8);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+  
+#eskejp p{
+    margin: 0;
+    font-weight: 200;
+}
+  
+#eskejp span{
+    margin: 0 0 0 10px;
+    background: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0, .8);
+    padding: 3px;
+    font-size: .8rem;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+
+#listajNaprijed{
+    position: fixed;
+    top: 85%;
+    left: 60%;
+    color: rgba(255,255,255,0.8);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    transform: translate(-50%, -50%);
+
+}
+  
+#listajNaprijed p{
+    margin: 0;
+    font-weight: 200;
+}
+  
+#listajNaprijed span{
+    margin: 0 0 0 10px;
+    background: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0, .8);
+    padding: 3px;
+    font-size: .8rem;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+#listajNazad{
+    position: fixed;
+    top: 85%;
+    left: 40%;
+    color: rgba(255,255,255,0.8);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    transform: translate(-50%, -50%);
+
+}
+  
+#listajNazad p{
+    margin: 0;
+    font-weight: 200;
+}
+  
+#listajNazad span{
+    margin: 0 0 0 10px;
+    background: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0, .8);
+    padding: 3px;
+    font-size: .8rem;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+#kupiLol{
+    position: fixed;
+    top: 85%;
+    left: 49.5%;
+    color: rgba(255,255,255,0.8);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    transform: translate(-50%, -50%);
+
+}
+  
+#kupiLol p{
+    margin: 0;
+    font-weight: 200;
+}
+  
+#kupiLol span{
+    margin: 0 0 0 10px;
+    background: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0, .8);
+    padding: 3px;
+    font-size: .8rem;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+
+#welcome-container{
+    width: 1400px;
+    height: 800px;
+    position: absolute;
+    background-image: linear-gradient(-20deg, rgb(36, 36, 36) 0%, rgb(36, 36, 36) 100%);
+    top: 50%;
+    left: 50%;
+    border-radius: 1.5%;
+    transform: translate(-50%, -50%);
+    display:none;
+    border: solid 2px rgb(255, 0, 0);
+}  
+
+#logo{
+    width: 15%;
+    height: 25%;
+}
+
+#logo2{
+    position: absolute;
+    width: 11%;
+    height: 21%;
+    left: 5%;
+    top: 0.5%;
+}
+
+#vidiostalo{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: solid 2px #ffffff;
+    background-color: #ffae0000;
+    border-radius: 50%;
+    left: 49.5%;
+    top: 13%;
+    transform: translate(-50%, -50%);
+}
+
+
+#moneystatus{
+    position: absolute;
+    padding-top: 11px;
+    right:5%;
+    top: 10%;
+    width: 20%;
+    height: 5%;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    color: black;
+}
+
+#moneystatus:hover{
+    background-color: #ffffff;
+}
+
+#welcomeauto{
+    position: absolute;
+    width: auto;
+    left: 15%;
+    top: 47%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: left;
+}
+
+#limitededition{
+    position: absolute;
+    padding-top: 5px;
+    color: white;
+    width: 12%;
+    height: 3.5%;
+    left: 23%;
+    top: 35.5%;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 2px #ffffff;
+    text-align: center;
+}
+
+#welcometext{
+    width: auto;
+    margin-left: 36%;
+    margin-top: 3%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+}
+
+#welcomecijena{
+    width: auto;
+    margin-left: 36%;
+    margin-top: 1.5%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+}
+
+#welcomebuy{
+    position: absolute;
+    padding-top: 8px;
+    margin-left: 14%;
+    top: 80%;
+    width: 5%;
+    height: 3.5%;
+    text-align: center;
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    color: rgb(129, 123, 123);
+}
+
+#splash{
+    width: 55%;
+    min-width: 600px;
+    height: auto;
+    position: absolute;
+    top: 37%;
+    left: 35%;
+}
+
+#autoslikica{
+    width: 45%;
+    min-width: 600px;
+    height: auto;
+    position: absolute;
+    top: 34%;
+    left: 39%;
+}
+
+
+/* https://i.imgur.com/4BuJ7Ru.png */
+
+
+#container {
+    padding-left: 30px;
+    padding-top:20px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: linear-gradient(to left, rgba(36, 36, 36, 0.623), rgba(36, 36, 36, 0.486)), url(https://i.imgur.com/LnKucQw.jpg) no-repeat top center;
+    display: none;
+}
+
+#lista-container{
+    position: absolute;
+    width: 90%;
+    height: 18%;
+    background-color: transparent;
+    left: 5%;
+    bottom: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.lista-karta {
+    display: inline-block;
+    width: auto;
+    height: 60%;
+    background-color: transparent;
+    border: solid 2px lightgray;
+    margin: 1vh;
+    font-size: 20px;
+    padding: 2vh;
+    color: white;
+    font-weight: bold;
+}
+
+.lista-karta:hover {
+    background-color: #921e1a5b;
+
+}  
+
+
+.eye-right {
+    font-size:150%;
+    transition: color .10s;
+}
+
+.eye-right:hover {
+    color:rgb(64, 67, 255);
+}
+
+.right {
+    position: absolute;
+    right: 2%;
+    font-size:150%;
+}
+
+
+
+#auto-container{
+    position: absolute;
+    width: 90%;
+    height: 65%;
+    left: 50%;
+    top: 38%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+}
+
+#imeauta{
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#kupiauto{
+    position: absolute;
+    padding-top: 7.5px;
+    color: black;
+    width: 8%;
+    height: 5%;
+    left: 5%;
+    top: 15%;
+    font-size: 16px;
+    border-radius: 40px;
+    text-align: center;
+    background-color: white;
+}
+
+#testvoznja{
+    position: absolute;
+    padding-top: 7.5px;
+    color: white;
+    width: 10%;
+    height: 5%;
+    left: 13.5%;
+    top: 15%;
+    font-size: 16px;
+    border-radius: 40px;
+    text-align: center;
+    background-color: transparent;
+}
+
+#testvoznja:hover{
+    background-color: #921e1a60;
+}
+
+
+#cijenatxt{
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 10%;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#cijenamini{
+    position: absolute;
+    margin-left: 5%;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+#maxbrzheader{
+    position: absolute;
+    left: 40%;
+    top: 84%;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+#maxbrz{
+    position: absolute;
+    left: 40%;
+    top: 87%;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+#gepekh{
+    position: absolute;
+    left: 40%;
+    top: 92%;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+#gepek{
+    position: absolute;
+    left: 40%;
+    top: 94%;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+#ubrzanjeh{
+    position: absolute;
+    left: 55%;
+    top: 84%;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+#ubrzanje{
+    position: absolute;
+    left: 55%;
+    top: 87%;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+#rezervarh{
+    position: absolute;
+    left: 55%;
+    top: 92%;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+#rezervar{
+    position: absolute;
+    left: 55%;
+    top: 94%;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+#osiguranjah{
+    position: absolute;
+    left: 72%;
+    top: 84%;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+#osiguranja{
+    position: absolute;
+    left: 72%;
+    top: 87%;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+#tuningh{
+    position: absolute;
+    left: 72%;
+    top: 92%;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+#tuning{
+    position: absolute;
+    left: 72%;
+    top: 94%;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+#autosalon{
+    position: absolute;
+    left: 5%;
+    top: 3%;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+}
+
+.vl {
+    border-left: 2px solid rgba(255, 255, 255, 0.699);
+    height: 10%;
+    position: absolute;
+    left: 28%;
+    top: 1.25%;
+}
+
+#balans{
+    position: absolute;
+    width: auto;
+    left: 31%;
+    top: 4.5%;
+    transform: translate(-50%, -50%);
+    color: lightgray;
+    font-size: 18px;
+    text-align: center;
+}
+
+#balanstekst{
+    position: absolute;
+    width: auto;
+    left: 33%;
+    top: 8%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+.pic-container {
+    width: 100%;
+    height: 70%;
+    margin-top: 5%;
+}
+
+.pic-container img {
+    display: block;
+    width: 40%;
+    min-width: 300px;
+    height: auto;
+}
+
+#center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#specifikacije-container{
+    position: absolute;
+    width: 20%;
+    height: 45%;
+    background-color: rgba(255, 255, 255, 0.151);
+    right: 8%;
+    top: 20%;
+    overflow: auto;
+}
+
+
+#specheader{
+    position: absolute;
+    width: auto;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.226);
+    font-size: 40px;
+    text-align: center;
+}
+
+#final-container{
+    position: absolute;
+    width: 20%;
+    height: 12%;
+    background-color: rgba(255, 255, 255, 0.151);
+    right: 8%;
+    bottom: 20%;
+    overflow: auto;
+}
+
+#cijenaheader{
+    position: absolute;
+    width: auto;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    color: rgb(184, 184, 184);
+    font-weight: bold;
+    font-size: 17px;
+    text-align: center;
+}
+
+#cijena{
+    position: absolute;
+    width: auto;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+#maxbrzinaheader{
+    position: absolute;
+    width: auto;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    color: rgb(184, 184, 184);
+    font-weight: bold;
+    font-size: 17px;
+    text-align: center;
+}
+
+#maxbrzina{
+    position: absolute;
+    width: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+#stockheader{
+    position: absolute;
+    width: auto;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    color: rgb(184, 184, 184);
+    font-weight: bold;
+    font-size: 17px;
+    text-align: center;
+}
+
+#stock{
+    position: absolute;
+    width: auto;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+#bojeheader{
+    position: absolute;
+    width: auto;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    color: rgb(184, 184, 184);
+    font-weight: bold;
+    font-size: 17px;
+    text-align: center;
+}
+
+#crvena{
+    position: absolute;
+    padding-top: 13px;
+    left: 50%;
+    top: 85%;
+    width: 15%;
+    height: 7%;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    color: rgb(255, 0, 0);
+    transform: translate(-50%, -50%);
+}
+
+#crvena:hover{
+    border:solid 2px rgb(255, 0, 0);
+}
+
+#bijela{
+    position: absolute;
+    padding-top: 13px;
+    left: 33%;
+    top: 85%;
+    width: 15%;
+    height: 7%;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    color: rgb(218, 218, 218);
+    transform: translate(-50%, -50%);
+}
+
+#bijela:hover{
+    border:solid 2px rgb(197, 197, 197);
+}
+
+#zuta{
+    position: absolute;
+    padding-top: 13px;
+    left: 67%;
+    top: 85%;
+    width: 15%;
+    height: 7%;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    color: rgb(255, 230, 0);
+    transform: translate(-50%, -50%);
+}
+
+#zuta:hover{
+    border:solid 2px rgb(255, 230, 0);
+}
+
+#crna{
+    position: absolute;
+    padding-top: 13px;
+    left: 16%;
+    top: 85%;
+    width: 15%;
+    height: 7%;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    transform: translate(-50%, -50%);
+}
+
+#crna:hover{
+    border:solid 2px rgb(0, 0, 0);
+}
+
+#plava{
+    position: absolute;
+    padding-top: 13px;
+    left: 84%;
+    top: 85%;
+    width: 15%;
+    height: 7%;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    color: rgb(0, 140, 255);
+    transform: translate(-50%, -50%);
+}
+
+#plava:hover{
+    border:solid 2px rgb(0, 140, 255);
+}
+
+#cijenabox{
+    position: absolute;
+    padding-top: 11px;
+    left:30%;
+    top: 90%;
+    width: 10%;
+    height: 10%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    color: white;
+    border: solid 2px white;
+    transform: translate(-50%, -50%);
+}
+
+#kupiauto:hover{
+    background-color: #cf971c7c;
+}
+
+
+
+
+#kara {
+	font-size: calc(16 / (1080 / 100) * 1vh);
+  }
+  
+  @media (max-aspect-ratio: 4 / 5) {
+	#kara {
+	  font-size: calc(16 / (1080 * 4 / 5 / 100) * 1vw);
+	}
+  }
+
+  
+
+#logo .contenair{
+	position:absolute;
+	z-index: 2;    
+	width: 5rem;									
+	height:5rem;									
+	right: 1rem;										
+	top:1rem;										
+			
+	 
+	background: url('logo.png');				
+	background-repeat: no-repeat;		
+	-webkit-animation-name: spinner; 
+
+}
+
+#logo .spacer{
+	z-index: 2;
+	width: 80%;
+	height: 100px;
+	margin: 0;  
+	text-align: left;
+}
+
+ 
+ /* WebKit and Opera browsers */ 
+ @-webkit-keyframes spinner { 
+   from 
+   { 
+	 -webkit-transform: rotateY(0deg); 
+   } 
+   to { 
+	 -webkit-transform: rotateY(-360deg); 
+   } 
+ } 
+ /* all other browsers */ 
+ @keyframes spinner { 
+	from { 
+	 -moz-transform: rotateY(0deg); 
+	 -ms-transform: rotateY(0deg); 
+	 transform: rotateY(0deg); 
+	} 
+	to 
+	{ 
+	 -moz-transform: rotateY(-360deg); 
+	 -ms-transform: rotateY(-360deg); 
+	 transform: rotateY(-360deg); 
+ 
+	} 
+ }
+
