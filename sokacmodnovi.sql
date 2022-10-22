@@ -4558,28 +4558,6 @@ INSERT INTO `poslovi` (`poso`, `zarada`) VALUES
 	('vodoinstalater', 572);
 /*!40000 ALTER TABLE `poslovi` ENABLE KEYS */;
 
--- Dumping structure for table sokac.tomic_teritorije
-CREATE TABLE IF NOT EXISTS `tomic_teritorije` (
-  `id` int(11) DEFAULT NULL,
-  `teritorija` varchar(60) NOT NULL,
-  `pripada` varchar(50) DEFAULT NULL,
-  `time` int(10) NOT NULL,
-  KEY `time` (`time`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- Dumping data for table sokac.tomic_teritorije: ~7 rows (approximately)
-DELETE FROM `tomic_teritorije`;
-/*!40000 ALTER TABLE `tomic_teritorije` DISABLE KEYS */;
-INSERT INTO `tomic_teritorije` (`id`, `teritorija`, `pripada`, `time`) VALUES
-	(1, 'T1', 'society_nil', 298),
-	(2, 'T2', 'society_nil', 199),
-	(3, 'T3', 'society_nil', 298),
-	(4, 'T4', 'society_nil', 298),
-	(5, 'T5', 'society_nil', 298),
-	(6, 'T6', 'society_nil', 298),
-	(7, 'T7', 'society_nil', 298);
-/*!40000 ALTER TABLE `tomic_teritorije` ENABLE KEYS */;
-
 -- Dumping structure for table sokac.tomic_territories
 CREATE TABLE IF NOT EXISTS `tomic_territories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
